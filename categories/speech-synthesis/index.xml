@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Speech synthesis on SGroup Research</title>
+    <link>https://sgroupresearch.github.io/categories/speech-synthesis/</link>
+    <description>Recent content in Speech synthesis on SGroup Research</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 02 Jun 2021 11:35:23 +0800</lastBuildDate>
+    
+	<atom:link href="https://sgroupresearch.github.io/categories/speech-synthesis/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>AdaSpeech 3: Adaptive Text to Speech for Spontaneous Style</title>
+      <link>https://sgroupresearch.github.io/adaspeech3/</link>
+      <pubDate>Wed, 02 Jun 2021 11:35:23 +0800</pubDate>
+      
+      <guid>https://sgroupresearch.github.io/adaspeech3/</guid>
+      <description>ArXiv: arXiv:2107.02530
+Accepted by INTERSPEECH 2021
+Author  Yuzi Yan (EE, Tsinghua University) yan-yz17@mails.tsinghua.edu.cn Xu Tan (Microsoft Research Asia) xuta@microsoft.com Bohan Li (Microsoft Azure Speech) bohan.li@microsoft.com Guangyan Zhang (EE, The Chinese University of Hong Kong) gyzhang@link.cuhk.edu.hk Tao Qin (Microsoft Research Asia) taoqin@microsoft.com Sheng Zhao (Microsoft Azure Speech) sheng.zhao@microsoft.com Yuan Shen (EE, Tsinghua University) shenyuan_ee@tsinghua.edu.cn Wei-Qiang Zhang (EE, Tsinghua University) wqzhang@tsinghua.edu.cn Tie-Yan Liu (Microsoft Research Asia) tie-yan.liu@microsoft.com  Audio Samples All of the audio samples use MelGAN as vocoder.</description>
+    </item>
+    
+    <item>
+      <title>AdaSpeech 2: Adaptive Text to Speech with Untranscribed Data</title>
+      <link>https://sgroupresearch.github.io/adaspeech2/</link>
+      <pubDate>Fri, 05 Mar 2021 11:35:23 +0800</pubDate>
+      
+      <guid>https://sgroupresearch.github.io/adaspeech2/</guid>
+      <description>ArXiv: arXiv:2104.09715
+Accepted by ICASSP 2021
+Author  Yuzi Yan (EE, Tsinghua University) yan-yz17@mails.tsinghua.edu.cn Xu Tan (Microsoft Research Asia) xuta@microsoft.com Bohan Li (Microsoft Azure Speech) bohan.li@microsoft.com Tao Qin (Microsoft Research Asia) taoqin@microsoft.com Sheng Zhao (Microsoft Azure Speech) szhao@microsoft.com Yuan Shen (EE, Tsinghua University) shenyuan_ee@tsinghua.edu.cn Tie-Yan Liu (Microsoft Research Asia) tie-yan.liu@microsoft.com  Audio Samples All of the audio samples use MelGAN as vocoder.
+Audio Quality When a man looks for something beyond his reach, his friends say he is looking for the pot of gold at the end of the rainbow.</description>
+    </item>
+    
+  </channel>
+</rss>

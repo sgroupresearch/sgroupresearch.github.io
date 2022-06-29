@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="generator" content="Hugo 0.66.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/github.min.css">
+<link rel="stylesheet" href="../css/normalize.css">
+<link rel="stylesheet" href="../css/skeleton.css">
+<link rel="stylesheet" href="../css/custom.css">
+<link rel="alternate" href="index.xml" type="application/rss+xml" title="SGroup Research">
+<link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+<title>Distributed Relative Formation and Obstacle Avoidance with Multi-agent Reinforcement Learning - SGroup Research</title>
+</head>
+<body>
+
+<div class="container">
+
+	<header role="banner">
+		
+			
+		
+		
+	</header>
+
+
+	<main role="main">
+		<article itemscope itemtype="https://schema.org/BlogPosting">
+            <h1 class="entry-title" itemprop="headline">Distributed Relative Formation and Obstacle Avoidance with Multi-agent Reinforcement Learning</h1>
+			
+			<section itemprop="entry-text">
+				<!-- ArXiv: [arXiv:xxxx.xxxxx](https://arxiv.org/pdf/xxxx.xxxx.pdf) -->
+<h2 id="authors">Authors</h2>
+<ul>
+<li>Yuzi Yan (EE, Tsinghua University) <a href="mailto:yan-yz17@tsinghua.org.cn">yan-yz17@tsinghua.org.cn</a></li>
+<li>Xiaoxiang Li (EE, Tsinghua University) <a href="mailto:lxx17@mails.tsinghua.edu.cn">lxx17@mails.tsinghua.edu.cn</a></li>
+<li>Xinyou Qiu (EE, Tsinghua University) <a href="mailto:qxy18@mails.tsinghua.edu.cn">qxy18@mails.tsinghua.edu.cn</a></li>
+<li>Jiantao Qiu (EE, Tsinghua University) <a href="mailto:qjt15@mails.tsinghua.edu.cn">qjt15@mails.tsinghua.edu.cn</a></li>
+<li>Jian Wang (EE, Tsinghua University) <a href="mailto:jian-wang@tsinghua.edu.cn">jian-wang@tsinghua.edu.cn</a></li>
+<li>Yu Wang (EE, Tsinghua University) <a href="mailto:yu-wang@tsinghua.edu.cn">yu-wang@tsinghua.edu.cn</a></li>
+<li>Yuan Shen (EE, Tsinghua University) <a href="mailto:shenyuan_ee@tsinghua.edu.cn">shenyuan_ee@tsinghua.edu.cn</a></li>
+</ul>
+<h2 id="abstract">Abstract</h2>
+<p>Multi-agent formation as well as obstacle avoidance is one of the most actively studied topics in the field of multi-agent systems. Although some classic controllers like model predictive control (MPC) and fuzzy control achieve a certain measure of success, most of them require precise global information which is not accessible in harsh environments. On the other hand, some reinforcement learning (RL) based
+approaches adopt the leader-follower structure to organize different agents&rsquo; behaviors, which sacrifices the collaboration between agents thus suffering from bottlenecks in maneuverability and robustness.</p>
+<p>In this paper, we propose a distributed formation and obstacle avoidance method based on multi-agent reinforcement learning (MARL). Agents in our system only utilize local and relative information to make decisions and control themselves distributively. Agents in the multi-agent system will reorganize
+themselves into a new topology quickly in case that any of them is disconnected. Our method achieves better performance regarding formation error, formation convergence rate and on-par success rate of obstacle avoidance compared with baselines (both classic control methods and another RL-based method). The feasibility of our method is verified by both  simulation and hardware implementation with Ackermann-steering vehicles</p>
+<h2 id="abstract">Contents</h2>
+<b><a href="#render-results">Rendering</a></b><br>
+<!-- <a href="#1.1">1.1 3 agents (triangle)</a><br>
+<a href="#1.2">1.2 4 agents (square)</a><br>
+<a href="#1.3">1.3 Formation Adapation </a><br> -->
+<b><a href="#hardware">Hardware Implementation</a></b><br>
+<!-- <a href="#2.1">2.1 MultiVehicleEnv </a><br>
+<a href="#2.2">2.2 Hardware Platform </a><br> -->
+<b><a href="#method">Method</a></b><br>
+<!-- <a href="#3.1">3.1 Model Structure</a><br>
+<a href="#3.2">3.2 Policy Distillation</a><br>
+<a href="#3.3">3.3 Curriculum Learning</a><br> -->
+<b><a href="#results">Results</a></b><br>
+<!-- <a href="#4.1">4.1 Training Process </a><br>
+<a href="#4.2">4.2 Formation Adaptation </a><br>
+<a href="#4.3">4.3 Advantage of Curriculum Learning</a><br> -->
+<h2 id="render-results">Rendering</h2>
+<p><span id="1.1" name="3 agents"></span></p>
+<p><em>3 agents  (triangle)</em></p>
+<table><thead>
+<tr>
+<th style="text-align: center">3 agents in level-0 obstacle scenario</th>
+<th style="text-align: center">3 agents in level-1 obstacle scenario</th>
+<th style="text-align: center">3 agents in level-2 obstacle scenario</th>
+</tr></thead><tbody>
+<tr>
+<td style="text-align: center"><img src="../images/relativeformation/3agents-0obs-f.gif" width="80%"/></td>
+<td style="text-align: center"><img src="../images/relativeformation/3agents-1obs-f.gif" width="80%"/></td>
+<td style="text-align: center"><img src="../images/relativeformation/3agents-3obs-f.gif" width="80%"/></td>
+</tr>
+</tbody></table>
+<p><span id="1.2" name="4 agents"></span></p>
+<p><em>4 agents (square)</em></p>
+<table><thead>
+<tr>
+<th style="text-align: center">4 agents in level-0 obstacle scenario</th>
+<th style="text-align: center">4 agents in level-1 obstacle scenario</th>
+<th style="text-align: center">4 agents in level-2 obstacle scenario</th>
+</tr></thead><tbody>
+<tr>
+<td style="text-align: center"><img src="../images/relativeformation/4agents-0obs-f.gif" width="80%"/></td>
+<td style="text-align: center"><img src="../images/relativeformation/4agents-1obs-f.gif" width="80%"/></td>
+<td style="text-align: center"><img src="../images/relativeformation/4agents-3obs-f.gif" width="80%"/></td>
+</tr>
+</tbody></table>
+<p><span id="1.3" name="Formation Adaptation"></span></p>
+<p><em>Formation Adaptation</em></p>
+<table><thead>
+<tr>
+<th style="text-align: center">formation adaptation when agents die</th>
+<th style="text-align: center">MVE relative triangle formation</th>
+<th style="text-align: center">MVE relative triangle formation</th>
+</tr></thead><tbody>
+<tr>
+<td style="text-align: center"><img src="../images/relativeformation/formation_change.gif" width="80%"/></td>
+<td style="text-align: center"><img src="../images/relativeformation/MVE_2.gif" width="80%"/></td>
+<td style="text-align: center"><img src="../images/relativeformation/MVE_1.gif" width="80%"/></td>
+</tr>
+</tbody></table>
+<h2 id="hardware">Hardware Implementation</h2>
+<p><span id="2.1" name="3 agents formation"></span></p>
+<p><em>Formation with Random Initialization</em></p>
+<table><thead>
+<tr>
+<th style="text-align: center">Hardware</th>
+<!-- <th style="text-align: center">Simulation on MVE</th> -->
+<th style="text-align: center">OptiTrack</th>
+</tr></thead><tbody>
+<tr>
+<td style="text-align: center"><img src="../images/relativeformation/3agent_form_hard.gif" width="55%"/></td>
+<!-- <td style="text-align: center"><img src="../images/relativeformation/3agent_form_mve.gif" width="80%"/></td> -->
+<td style="text-align: center"><img src="../images/relativeformation/3agent_form_opi.gif" width="100%"/></td>
+</tr>
+</tbody></table>
+<p><span id="2.2" name="Formation & Avoiding Obstacle"></span></p>
+<p><em>Avoiding Obstacles</em></p>
+<table><thead>
+<tr>
+<th style="text-align: center">Hardware</th>
+<!-- <th style="text-align: center">Simulation on MVE</th> -->
+<th style="text-align: center">OptiTrack</th>
+</tr></thead><tbody>
+<tr>
+<td style="text-align: center"><img src="../images/relativeformation/3agent_avoid_hard.gif" width="80%"/></td>
+<!-- <td style="text-align: center"><img src="../images/relativeformation/MVE_2.gif" width="80%"/></td> -->
+<td style="text-align: center"><img src="../images/relativeformation/3agent_avoid_opi.gif" width="70%"/></td>
+</tr>
+</tbody></table>
+<h2 id="method">Method</h2>
+<p><span id="3.1" name="Method"></span></p>
+<table><thead>
+<tr>
+<th style="text-align: center">Model Structure</th>
+<th style="text-align: center">Policy Distillation for Formation Adaptation</th>
+<th style="text-align: center">Schematic Diagram of the MVE environment</th>
+</tr></thead><tbody>
+<tr>
+<td style="text-align: center"><img src="../images/relativeformation/network.png" width="80%"/></td>
+<td style="text-align: center"><img src="../images/relativeformation/policy_distillation.png" width="80%"/></td>
+<td style="text-align: center"><img src="../images/relativeformation/MVE_diag.png" width="70%"/></td>
+</tr>
+</tbody></table>
+<h2 id="results">Results</h2>
+<table><thead>
+<tr>
+<th style="text-align: center">Training</th>
+</tr></thead><tbody>
+<tr>
+<td style="text-align: center"><img src="../images/relativeformation/figure_training.png" width="100%"/></td>
+</tr>
+</tbody></table>
+<table><thead>
+<tr>
+<th style="text-align: center">Formation Adapatation</th>
+<th style="text-align: center">Curriculum Learning</th>
+</tr></thead><tbody>
+<tr>
+<td style="text-align: center"><img src="../images/relativeformation/figure_form_change.png" width="70%"/></td>
+<td style="text-align: center"><img src="../images/relativeformation/figure_curriculum.png" width="70%"/></td>
+</tr>
+</tbody></table>
+<table><thead>
+<tr>
+<th style="text-align: center">Benchmark</th>
+</tr></thead><tbody>
+<tr>
+<td style="text-align: center"><img src="../images/relativeformation/figure_benchmark.png" width="70%"/></td>
+</tr>
+</tbody></table>
+<h2 id="our-related-works">Our Related Works</h2>
+<p><a href="/drlovertaking/">A Deep Reinforcement Learning Based Approach for Autonomous Overtaking</a><br></p>
+
+			</section>
+		</article>
+	</main>
+
+
+	
+
+</div>
+
+<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-139981676-1', 'auto');
+	ga('send', 'pageview');
+</script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+<script type="text/x-mathjax-config">
+     MathJax.Hub.Config({
+         HTML: ["input/TeX","output/HTML-CSS"],
+         TeX: {
+                Macros: {
+                         bm: ["\\boldsymbol{#1}", 1],
+                         argmax: ["\\mathop{\\rm arg\\,max}\\limits"],
+                         argmin: ["\\mathop{\\rm arg\\,min}\\limits"]},
+                extensions: ["AMSmath.js","AMSsymbols.js"],
+                equationNumbers: { autoNumber: "AMS" } },
+         extensions: ["tex2jax.js"],
+         jax: ["input/TeX","output/HTML-CSS"],
+         tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                    displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+                    processEscapes: true },
+         "HTML-CSS": { availableFonts: ["TeX"],
+                       linebreaks: { automatic: true } }
+     });
+ </script>
+
+ <script type="text/x-mathjax-config">
+     MathJax.Hub.Config({
+       tex2jax: {
+         skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+       }
+     });
+ </script>
+
+ <script type="text/javascript" async
+   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML">
+ </script>
+
+
+
+
+</body>
+</html>
+

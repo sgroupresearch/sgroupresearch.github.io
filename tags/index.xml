@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on SGroup Research</title>
+    <link>https://sgroupresearch.github.io/tags/</link>
+    <description>Recent content in Tags on SGroup Research</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 19 Mar 2022 15:30:00 +0901</lastBuildDate>
+    
+	<atom:link href="https://sgroupresearch.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>MAS-RelLoc</title>
+      <link>https://sgroupresearch.github.io/tags/mas-relloc/</link>
+      <pubDate>Sat, 19 Mar 2022 15:30:00 +0901</pubDate>
+      
+      <guid>https://sgroupresearch.github.io/tags/mas-relloc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>MA-DRL</title>
+      <link>https://sgroupresearch.github.io/tags/ma-drl/</link>
+      <pubDate>Thu, 19 Aug 2021 15:30:00 +0901</pubDate>
+      
+      <guid>https://sgroupresearch.github.io/tags/ma-drl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Speech</title>
+      <link>https://sgroupresearch.github.io/tags/speech/</link>
+      <pubDate>Wed, 02 Jun 2021 11:35:23 +0800</pubDate>
+      
+      <guid>https://sgroupresearch.github.io/tags/speech/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

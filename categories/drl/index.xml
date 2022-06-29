@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DRL on SGroup Research</title>
+    <link>https://sgroupresearch.github.io/categories/drl/</link>
+    <description>Recent content in DRL on SGroup Research</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 19 Aug 2021 15:30:00 +0901</lastBuildDate>
+    
+	<atom:link href="https://sgroupresearch.github.io/categories/drl/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>A Deep Reinforcement Learning Based Approach for Autonomous Overtaking</title>
+      <link>https://sgroupresearch.github.io/drlovertaking/</link>
+      <pubDate>Thu, 19 Aug 2021 15:30:00 +0901</pubDate>
+      
+      <guid>https://sgroupresearch.github.io/drlovertaking/</guid>
+      <description>ArXiv: arXiv:xxxx.xxxxx
+Authors  Xiaoxiang Li (EE, Tsinghua University) lxx17@mails.tsinghua.edu.cn Xinyou Qiu (EE, Tsinghua University) qxy18@mails.tsinghua.edu.cn Jian Wang (EE, Tsinghua University) jian-wang@tsinghua.edu.cn Yuan Shen (EE, Tsinghua University) shenyuan_ee@tsinghua.edu.cn  * Equal contribution.
+Abstract ​	In this paper, we propose a deep reinforcement learning scheme, based on deep deterministic policy gradient, to train the overtaking actions for autonomous vehicles. In contrast to conventional autonomous driving systems which require for expensive LiDAR or visual cameras, our method uses low cost sensors like ultra-wide-band antenna arrays and inertial measurement units to obtain easily available measurements such as distance, angle, and speed information.</description>
+    </item>
+    
+    <item>
+      <title>Distributed Relative Formation and Obstacle Avoidance with Multi-agent Reinforcement Learning</title>
+      <link>https://sgroupresearch.github.io/relativeformation/</link>
+      <pubDate>Thu, 19 Aug 2021 15:30:00 +0901</pubDate>
+      
+      <guid>https://sgroupresearch.github.io/relativeformation/</guid>
+      <description>Authors  Yuzi Yan (EE, Tsinghua University) yan-yz17@tsinghua.org.cn Xiaoxiang Li (EE, Tsinghua University) lxx17@mails.tsinghua.edu.cn Xinyou Qiu (EE, Tsinghua University) qxy18@mails.tsinghua.edu.cn Jiantao Qiu (EE, Tsinghua University) qjt15@mails.tsinghua.edu.cn Jian Wang (EE, Tsinghua University) jian-wang@tsinghua.edu.cn Yu Wang (EE, Tsinghua University) yu-wang@tsinghua.edu.cn Yuan Shen (EE, Tsinghua University) shenyuan_ee@tsinghua.edu.cn  Abstract Multi-agent formation as well as obstacle avoidance is one of the most actively studied topics in the field of multi-agent systems. Although some classic controllers like model predictive control (MPC) and fuzzy control achieve a certain measure of success, most of them require precise global information which is not accessible in harsh environments.</description>
+    </item>
+    
+  </channel>
+</rss>

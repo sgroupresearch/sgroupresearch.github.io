@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="generator" content="Hugo 0.66.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/github.min.css">
+<link rel="stylesheet" href="../css/normalize.css">
+<link rel="stylesheet" href="../css/skeleton.css">
+<link rel="stylesheet" href="../css/custom.css">
+<link rel="alternate" href="index.xml" type="application/rss+xml" title="SGroup Research">
+<link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+<title>A Deep Reinforcement Learning Based Approach for Autonomous Overtaking - SGroup Research</title>
+</head>
+<body>
+
+<div class="container">
+
+	<header role="banner">
+		
+			
+		
+		
+	</header>
+
+
+	<main role="main">
+		<article itemscope itemtype="https://schema.org/BlogPosting">
+            <h1 class="entry-title" itemprop="headline">A Deep Reinforcement Learning Based Approach for Autonomous Overtaking</h1>
+			
+			<section itemprop="entry-text">
+				<p>ArXiv: <a href="https://arxiv.org/pdf/xxxx.xxxx.pdf">arXiv:xxxx.xxxxx</a></p>
+<h2 id="authors">Authors</h2>
+<ul>
+<li>Xiaoxiang Li (EE, Tsinghua University) <a href="mailto:lxx17@mails.tsinghua.edu.cn">lxx17@mails.tsinghua.edu.cn</a></li>
+<li>Xinyou Qiu (EE, Tsinghua University) <a href="mailto:qxy18@mails.tsinghua.edu.cn">qxy18@mails.tsinghua.edu.cn</a></li>
+<li>Jian Wang (EE, Tsinghua University) <a href="mailto:jian-wang@tsinghua.edu.cn">jian-wang@tsinghua.edu.cn</a></li>
+<li>Yuan Shen (EE, Tsinghua University) <a href="mailto:shenyuan_ee@tsinghua.edu.cn">shenyuan_ee@tsinghua.edu.cn</a></li>
+</ul>
+<p><small>* Equal contribution.</small></p>
+<h2 id="abstract">Abstract</h2>
+<p>​	In this paper, we propose a deep reinforcement learning scheme, based on deep deterministic policy gradient, to
+train the overtaking actions for autonomous vehicles. In contrast to conventional autonomous driving systems which require for
+expensive LiDAR or visual cameras, our method uses low cost sensors like ultra-wide-band antenna arrays and inertial
+measurement units to obtain easily available measurements such as distance, angle, and speed information. Our method
+directly projects raw sensory measurements into continuous control signals for overtaking maneuvers. Simulation results
+demonstrate that our method outperforms two other state-of-the-art algorithms. Besides, the technique can be generalized to
+other areas of autonomous driving such as merging, platooning, formation, by modifying the parameters and conditions of the
+reward function under the same framework.</p>
+<h2 id="abstract">Contents</h2>
+<p>​	The main contributions of our work are as follows:</p>
+<ol>
+<li>We put forward a DRL model, based on DDPG, to train overtaking control instructions in a continuous action space. In the proposed scheme, the decision-making and control layers are tightly coupled. Simulation results show superior  performance compared with two other existing algorithms, fuzzy control and deep Q-network (DQN).</li>
+<li>We propose a reward function design framework for autonomous overtaking, and apply it to the overtaking maneuver.
+This framework can be easily extended to other areas of autonomous driving like merging, platooning, formation, just by modifying the parameters and conditions of the reward function.</li>
+<li>We use low-cost sensors to get easily available measurements, but the proposed scheme still shows high robustness
+to harsh environment, which guarantees that the algorithm is easy to implement on hardware and has high reliability.</li>
+</ol>
+<img src="../images/DRLovertaking/diagram.png" width="70%"/>
+<h2 id="our-related-works">Our Related Works</h2>
+<p><a href="/relativeformation/">Relative Formation and Obstacle Avoidance with Distributed Multi-agent Reinforcement Learning</a><br></p>
+
+			</section>
+		</article>
+	</main>
+
+
+	
+
+</div>
+
+<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-139981676-1', 'auto');
+	ga('send', 'pageview');
+</script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+<script type="text/x-mathjax-config">
+     MathJax.Hub.Config({
+         HTML: ["input/TeX","output/HTML-CSS"],
+         TeX: {
+                Macros: {
+                         bm: ["\\boldsymbol{#1}", 1],
+                         argmax: ["\\mathop{\\rm arg\\,max}\\limits"],
+                         argmin: ["\\mathop{\\rm arg\\,min}\\limits"]},
+                extensions: ["AMSmath.js","AMSsymbols.js"],
+                equationNumbers: { autoNumber: "AMS" } },
+         extensions: ["tex2jax.js"],
+         jax: ["input/TeX","output/HTML-CSS"],
+         tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                    displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+                    processEscapes: true },
+         "HTML-CSS": { availableFonts: ["TeX"],
+                       linebreaks: { automatic: true } }
+     });
+ </script>
+
+ <script type="text/x-mathjax-config">
+     MathJax.Hub.Config({
+       tex2jax: {
+         skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+       }
+     });
+ </script>
+
+ <script type="text/javascript" async
+   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML">
+ </script>
+
+
+
+
+</body>
+</html>
+

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MAS-RelLoc on SGroup Research</title>
+    <link>https://sgroupresearch.github.io/tags/mas-relloc/</link>
+    <description>Recent content in MAS-RelLoc on SGroup Research</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 19 Mar 2022 15:30:00 +0901</lastBuildDate>
+    
+	<atom:link href="https://sgroupresearch.github.io/tags/mas-relloc/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>A   Backbone-Listener Relative  Localization Scheme   for Distributed Multi-agent Systems</title>
+      <link>https://sgroupresearch.github.io/gc2022/</link>
+      <pubDate>Sat, 19 Mar 2022 15:30:00 +0901</pubDate>
+      
+      <guid>https://sgroupresearch.github.io/gc2022/</guid>
+      <description>Authors  Xiaoxiang Li (EE, Tsinghua University) lxx17@mails.tsinghua.edu.cn Yunlong Wang (EE, Tsinghua University) ylwang_ee@tsinghua.edu.cn Yan Liu (China Satellite Network Innovation Co., Ltd.) liu-y15g@tsinghua.org.cn Yuan Shen (EE, Tsinghua University) shenyuan_ee@tsinghua.edu.cn  Abstract Reliable and accurate localization awareness is of great importance for the distributed multi-agent system (D-MAS). Instead of global information, measurements only between neighbors pose many challenges for distributed systems, which leads to the development and application of relative localization. In this paper, we put forward a backbone-listener localization scheme for the D-MAS.</description>
+    </item>
+    
+    <item>
+      <title>CORELS:  A Cooperative Relative Localization System for Multi-agent Networks</title>
+      <link>https://sgroupresearch.github.io/corels/</link>
+      <pubDate>Sat, 19 Mar 2022 15:30:00 +0901</pubDate>
+      
+      <guid>https://sgroupresearch.github.io/corels/</guid>
+      <description>Authors  Xiaoxiang Li (EE, Tsinghua University) lxx17@mails.tsinghua.edu.cn Kai Ma (EE, Tsinghua University) mk19@mails.tsinghua.edu.cn Lingwei Xu (EE, Tsinghua University) xlw18@mails.tsinghua.edu.cn Yunlong Wang (EE, Tsinghua University) &amp;lt; ylwang_ee@tsinghua.edu.cn&amp;gt; Jian Wang (EE, Tsinghua University) jian-wang@tsinghua.edu.cn Yuan Shen (EE, Tsinghua University) shenyuan_ee@tsinghua.edu.cn  Abstract Reliable and accurate spatio-temporal information is of great importance for multi-agent networks. Cooperative relative localization technologies provide a promising paradigm for such information, especially in GNSS-denied or infrastructure-free scenarios without absolute position reference.</description>
+    </item>
+    
+  </channel>
+</rss>
